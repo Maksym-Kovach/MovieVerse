@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const config = {
     mode: 'production',
     output: {
-        filename: 'bundle--[hash:base64].js',
+        filename: 'bundle--[fullhash:base64].js',
     },
     plugins: [new MiniCssExtractPlugin()],
     module: {

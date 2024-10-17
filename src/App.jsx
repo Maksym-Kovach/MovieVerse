@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import * as styles from './app.css'; case1
-import styles from './App';
+import styles from './App.css';
 
 const App = () => {
     return <div className={styles.main}> My First React App </div>;

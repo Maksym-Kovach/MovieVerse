@@ -1,5 +1,4 @@
-const path = require('node:path');
-const config = {
+module.exports = {
     env: {
         browser: true,
         node: true,
@@ -14,6 +13,9 @@ const config = {
         'plugin:cypress/recommended',
     ],
     settings: {
+        react: {
+            version: 'detect',
+        },
         'import/resolver': {
             node: {
                 extensions: ['.js', '.jsx'],
@@ -23,7 +25,7 @@ const config = {
             },
         },
     },
-    plugins: ['simple-import-sort ,react'],
+    plugins: ['simple-import-sort', 'react'],
     ignorePatterns: ['node_modules', '.eslintrc.js'],
     rules: {
         'unicorn/filename-case': [
@@ -56,5 +58,3 @@ const config = {
         Cypress: true,
     },
 };
-
-module.exports = config;

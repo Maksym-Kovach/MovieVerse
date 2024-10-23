@@ -1,0 +1,6 @@
+#!/bin/sh
+npx eslint ./src --fix
+if [ $? -ne 0 ]; then
+  echo "ESLint found errors. Commit aborted."
+  exit 1
+fi

@@ -32,3 +32,4 @@ export default [
     rules: pluginCypress.configs.recommended.rules,
   },
 ];
+

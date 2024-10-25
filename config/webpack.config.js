@@ -7,6 +7,7 @@ const config = {
     output: {
         path: path.resolve(__dirname, '../dist'),
     },
+    mode: 'development',
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../templates/index.html'),

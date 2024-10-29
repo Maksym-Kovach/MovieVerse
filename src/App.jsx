@@ -1,56 +1,21 @@
-import Button from '@components/Button';
-import Header from '@components/Header';
-import Menu from '@components/Menu';
-import Tabs from '@components/Tabs';
-import List from '@components/List';
-import ListItem from '@components/ListItem';
-import React, { useState } from 'react';
+import React from 'react';
+import Header from './components/Header/Header';
+import HeroSection from './components/Promo/HeroSection';
+import MovieList from './components/MovieList/MovieList';
+import Footer from './components/Footer/Footer';
 
-import styles from './App.css';
-
-const content = [
-    [
-        'React is extremely popular',
-        'It makes building complex, interactive UIs a breeze',
-        "It's powerful & flexible",
-        'It has a very active and versatile ecosystem',
-    ],
-    ['Components, JSX & Props', 'State', 'Hooks (e.g., useEffect())', 'Dynamic rendering'],
-    [
-        'Official web page (react.dev)',
-        'Next.js (Fullstack framework)',
-        'React Native (build native mobile apps with React)',
-    ],
-];
 
 export default function App() {
-    const [activeContentIndex, setActiveContentIndex] = useState();
-
     return (
-        <div className={styles.container}>
-            <div id="tabs" className={styles.tabs}>
-                <Header title="MovieVerse" subTitle="i.e., using the React library for rendering the UI" />
-                <Menu>
-                    <Button isActive={activeContentIndex === 0} onClick={() => setActiveContentIndex(0)}>
-                        Why React?
-                    </Button>
-                    <Button isActive={activeContentIndex === 1} onClick={() => setActiveContentIndex(1)}>
-                        Core Features
-                    </Button>
-                    <Button isActive={activeContentIndex === 2} onClick={() => setActiveContentIndex(2)}>
-                        Related Resources
-                    </Button>
-                </Menu>
-                {/*{listContent}*/}
-                {activeContentIndex === undefined ? <h3>Please select one of the tabs</h3> : undefined }
-                {activeContentIndex === undefined ? undefined : <Tabs id="tab-content">
-                    <List>
-                        {content[activeContentIndex].map((item) => (
-                            <ListItem key={item}>{item}</ListItem>
-                        ))}
-                    </List>
-                </Tabs>}
-            </div>
+        <div className="App">
+            <Header title="MovieVerse" />
+            <HeroSection
+                title="Marvel 1943: Rise of Hydra"
+                description="In the chaos of war, worlds collide. Skydance New Media and Marvel Games share an original story where an ensemble of four heroes must overcome their differences and form an uneasy alliance to confront their common enemy."
+                imageUrl="https://i.ytimg.com/vi/Lb2wwEx6DVw/maxresdefault.jpg"
+            />
+            <MovieList />
+            <Footer />
         </div>
     );
 }

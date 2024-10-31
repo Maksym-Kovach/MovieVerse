@@ -28,7 +28,7 @@ const config = {
         ],
     },
     devServer: {
-        port: 3006,
+        port: 3000,
     },
 };
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './MovieList.module.css'; // імпорт модуля CSS
+import styles from './MovieList.module.css';
 
 class MovieList extends Component {
     render() {

@@ -1,13 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Header.module.css';
 
 const Header = ({ title = 'MovieVerse' }) => {
+    const navigate = useNavigate();
+
+    const handleNavigation = (path) => {
+        navigate(path);
+    };
+
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>{title}</div>
+            <div className={styles.logo}>
+                <Link to="/" className={styles.logoLink}>{title}</Link>
+            </div>
             <nav className={styles.nav}>
-                <button className={styles.navButton}>Movies</button>
+                <button className={styles.navButton} onClick={() => handleNavigation('/movies')}>
+                    Movies
+                </button>
                 <button className={styles.navButton}>Sport</button>
                 <button className={styles.navButton}>Cartoons</button>
                 <button className={styles.navButton}>Live</button>
@@ -17,9 +28,26 @@ const Header = ({ title = 'MovieVerse' }) => {
                 <input
                     type="text"
                     className={styles.searchInput}
+                    placeholder="Search movies..."
                 />
-                <button className={styles.authButton}>Register</button>
-                <button className={styles.authButton}>SignIn</button>
+                <button
+                    className={styles.authButton}
+                    onClick={() => handleNavigation('/registration')}
+                >
+                    Register
+                </button>
+                <button
+                    className={styles.authButton}
+                    onClick={() => handleNavigation('/signin')}
+                >
+                    Sign In
+                </button>
+                <button
+                    className={styles.authButton}
+                    onClick={() => handleNavigation('/profile')}
+                >
+                    Profile
+                </button>
             </div>
         </header>
     );
@@ -30,4 +58,3 @@ Header.propTypes = {
 };
 
 export default Header;
-

@@ -60,3 +60,11 @@
 .authButton:hover {
     background-color: black;
 }
+
+.logoLink {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+

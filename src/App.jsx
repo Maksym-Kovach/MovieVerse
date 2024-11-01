@@ -1,11 +1,26 @@
 import React from 'react';
+import Header from './components/Header/Header';
+import HeroSection from './components/Promo/HeroSection';
+import MovieList from './components/MovieList/MovieList';
+import Footer from './components/Footer/Footer';
 
-// import * as styles from './app.css'; case1
+// import * as styles from './App.css'; case1
 import styles from './App.css';
 
-const App = () => {
-    return <div className={styles.main} data-testid="app"> My First React App </div>;
-};
+export default function App() {
+    return (
+        <div className="App">
+            <Header title="MovieVerse" />
+            <HeroSection
+                title="Marvel 1943: Rise of Hydra"
+                description="In the chaos of war, worlds collide. Skydance New Media and Marvel Games share an original story where an ensemble of four heroes must overcome their differences and form an uneasy alliance to confront their common enemy."
+                imageUrl="https://i.ytimg.com/vi/Lb2wwEx6DVw/maxresdefault.jpg"
+            />
+            <MovieList />
+            <Footer />
+        </div>
+    );
+}
 
 export default App;
 

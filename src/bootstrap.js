@@ -1,10 +1,22 @@
+import './assets/plain-css.css';
+
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 // import { default as App} from './App';
-import App from './App.jsx';
+import App from './App';
 // import { App } from './App';
 
+import Movie from './pages/Movie';
 const domElement = document.querySelector('#root-c3');
 const root = createRoot(domElement);
 
-root.render(<App />);
+root.render(
+    <Movie/>,
+);
+
+// {
+// property1: 4,
+// prop: "str"
+// handleClick: () => {return 12;}
+// children: 'Custom content'
+// }

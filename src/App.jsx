@@ -4,8 +4,6 @@ import HeroSection from './components/Promo/HeroSection';
 import MovieList from './components/MovieList/MovieList';
 import Footer from './components/Footer/Footer';
 
-// import * as styles from './App.css'; case1
-import styles from './App.css';
 
 export default function App() {
     return (
@@ -21,7 +19,3 @@ export default function App() {
         </div>
     );
 }
-
-export default App;
-
-// export { App };

@@ -14,7 +14,7 @@ import { AuthProvider } from '/hooks/AuthContext';  // Імпорт AuthProvider
 
 export default function App() {
     return (
-        <AuthProvider>  {/* Обгортка AuthProvider */}
+        <AuthProvider>
             <BrowserRouter>
                 <div className="App">
                     <Header title="MovieVerse" />

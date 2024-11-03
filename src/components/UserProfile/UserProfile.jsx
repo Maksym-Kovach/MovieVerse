@@ -5,10 +5,6 @@ const UserProfile = () => {
     return (
         <div className={styles.profileContainer}>
             <div className={styles.userInfo}>
-                <p><span>Username:</span> User</p>
-                <p><span>Email:</span> user@gmail.com</p>
-                <p><span>FirstName:</span> User</p>
-                <p><span>LastName:</span> User</p>
             </div>
             <div className={styles.avatarSection}>
                 <img
